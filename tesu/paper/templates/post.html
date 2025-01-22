@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+
+{% block title %}
+   Post
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
+<body>
+  <ul>
+    {% for post in mypost %}
+      
+        <i>{{ post.TopicPublishedDate }}</i><br>
+        <strong>{{ post.PostName }}</strong><br><br>
+        {{ post.TopicDescription }}<br>
+        
+  
+  <p>
+  <a href="{% url 'comment' post.id %}">view comments</a>
+  </p>
+  
+
+      <br>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "post.html" %}
+
+{% block title %}
+   Comments
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
+<body>
+
+{% if comment %}
+  <ul>
+    {% for c in comment %}
+      
+        
+        <strong>Name: {{ c.CommenterName }}</strong><br><br>
+        Comment: {{ c.CommentText }}<br>
+        
+      <br>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No comments available for this post.</p>
+{% endif %}
+{% endblock %}

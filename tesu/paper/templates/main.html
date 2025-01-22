@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+
+{% block title %}
+ TESU Online Blog
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
+<body>
+  <h1>TESU Online Blog</h1>
+
+  <h3>Stay connected with everything happening at The Educational Services University (TESU) through our online blog. Designed to inform, inspire, and engage, this blog serves as a virtual space where students, faculty, and alumni can share their experiences, insights, and updates.</h3>
+
+    What We Feature:
+    
+    Campus News: Get the latest updates on events, programs, and changes at TESU. Stay informed on university news and policies affecting your academic journey.
+    Student Stories: Read about the unique experiences and perspectives of fellow students. Whether it’s about study tips, navigating online courses, or campus life, student stories offer valuable insights.
+    Academic Resources: From tips on acing exams to advice on managing your workload, the blog provides academic guidance for students at every stage of their education.
+    Faculty Perspectives: Learn from the experts. Our blog features posts by TESU faculty who share educational tips, research findings, and advice for aspiring professionals.
+    Alumni Achievements: Catch up with TESU alumni who are making an impact in their careers and communities. Their success stories serve as motivation for current students.
+    Join the Conversation!
+    Whether you're a prospective student, a current member of our community, or an alum, we invite you to engage with our blog. Share your thoughts, ask questions, and connect with others who share your passion for learning and growth at TESU.
+  <p>
+  Check out all our <a href="{% url 'post' %}">posts</a>.
+  </p>
+  
+{% endblock %}
